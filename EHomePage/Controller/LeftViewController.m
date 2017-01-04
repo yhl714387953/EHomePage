@@ -7,8 +7,8 @@
 //
 
 #import "LeftViewController.h"
-#import "AppDelegate.h"
-#import "ViewController.h"
+//#import "AppDelegate.h"
+//#import "ViewController.h"
 #import "CollectionViewController.h"
 
 @interface LeftViewController ()
