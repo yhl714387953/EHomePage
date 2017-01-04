@@ -7,8 +7,6 @@
 //
 
 #import "LeftViewController.h"
-//#import "AppDelegate.h"
-//#import "ViewController.h"
 #import "CollectionViewController.h"
 
 @interface LeftViewController ()
@@ -31,10 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    UIButton *button=[[UIButton alloc]initWithFrame:CGRectMake(20, 80, 200, 60)];
-    [button addTarget:self action:@selector(changeRootViewAction) forControlEvents:UIControlEventTouchUpInside];
-    [button setTitle:@"changeRootVCButton" forState:UIControlStateNormal];
-//    [self.view addSubview:button];
+
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -91,14 +86,6 @@
     */
 }
 
--(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-//    
-//    ViewController* vc = [[ViewController alloc] init];
-//    [self presentViewController:vc animated:NO completion:^{
-//        
-//    }];
 
-}
 
 @end
