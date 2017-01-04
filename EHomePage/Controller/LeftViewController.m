@@ -92,12 +92,12 @@
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
-    ViewController* vc = [[ViewController alloc] init];
-    [self presentViewController:vc animated:NO completion:^{
-        
-    }];
+//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+//    
+//    ViewController* vc = [[ViewController alloc] init];
+//    [self presentViewController:vc animated:NO completion:^{
+//        
+//    }];
 
 }
 
