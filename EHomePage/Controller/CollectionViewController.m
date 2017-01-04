@@ -9,7 +9,6 @@
 #import "CollectionViewController.h"
 #import "CollectionViewCell.h"
 #import "CollectionReusableHeaderView.h"
-#import "AppDelegate.h"
 #import <YRSideViewController.h>
 
 @interface CollectionViewController ()<UICollectionViewDelegateFlowLayout>
@@ -46,7 +45,7 @@ static NSString * const reuseIdentifier = @"Cell";
     vc.view.backgroundColor = [UIColor blueColor];
     
 
-    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+//    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
 //    YRSideViewController *sideViewController=[delegate sideViewController];
 //    [sideViewController showLeftViewController:true];
 }
