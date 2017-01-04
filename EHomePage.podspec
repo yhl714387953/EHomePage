@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/yhl714387953/HomePage.git", :commit => "b6e0304a2ad1eac4100bd65a0101bcb17f20a2e5"}
+  s.source       = { :git => "https://github.com/yhl714387953/HomePage.git", :commit => "543e6f746d7dd06fe284a1fa215b8b304c7700ae"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "EHomePage/*.{h,m}"
+  s.source_files  = "EHomePage/**/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
