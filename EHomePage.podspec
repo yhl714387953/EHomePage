@@ -106,6 +106,7 @@ Pod::Spec.new do |s|
 
   # s.resource  = "icon.png"
   # s.resources = "Resources/*.png"
+  s.resources = "EHomePage/**/*"  #资源文件(*.xib,*.png等)﻿
 
   # s.preserve_paths = "FilesToSave", "MoreFilesToSave"
 
