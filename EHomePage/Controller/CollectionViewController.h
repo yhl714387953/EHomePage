@@ -10,4 +10,6 @@
 
 @interface CollectionViewController : UICollectionViewController
 
+@property (nonatomic, copy) void (^naviItemBlock)(id obj);
+
 @end

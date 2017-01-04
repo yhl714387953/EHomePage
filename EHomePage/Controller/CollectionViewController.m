@@ -32,6 +32,15 @@ static NSString * const reuseIdentifier = @"Cell";
     [self.collectionView registerClass:[CollectionReusableHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
     // Do any additional setup after loading the view.
+    
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemBookmarks) target:self action:@selector(itemClick:)];
+}
+
+
+-(void)itemClick:(UIBarButtonItem*)item{
+    if (self.naviItemBlock) {
+        self.naviItemBlock(item);
+    }
 }
 
 - (void)didReceiveMemoryWarning {
