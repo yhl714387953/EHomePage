@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/yhl714387953/HomePage.git", :commit => "ee68fbb833e8a88f8c1d6d573ef6ff60d9992ecd"}
+  s.source       = { :git => "https://github.com/yhl714387953/HomePage.git", :commit => "951405050448842a9c7b5825014cd16ac806d088"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
