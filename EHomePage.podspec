@@ -15,9 +15,9 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name         = "HomePage"
+  s.name         = "EHomePage"
   s.version      = "1.0.0"
-  s.summary      = " HomePage 这个是首页"
+  s.summary      = " EHomePage 这个是首页"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -79,7 +79,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/yhl714387953/HomePage.git", :commit => "90a30c2d24702e9e1a211e5588e997470579a9c8"}
+  s.source       = { :git => "https://github.com/yhl714387953/HomePage.git", :commit => "b6e0304a2ad1eac4100bd65a0101bcb17f20a2e5"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
