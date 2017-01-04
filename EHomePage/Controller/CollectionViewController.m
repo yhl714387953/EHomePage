@@ -26,9 +26,8 @@ static NSString * const reuseIdentifier = @"Cell";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Register cell classes
-//    [self.collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:reuseIdentifier];
-    UINib* headerNib = [UINib nibWithNibName:NSStringFromClass([CollectionReusableHeaderView class]) bundle:[NSBundle mainBundle]];
-    [self.collectionView registerNib:headerNib forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
+    
+    [self.collectionView registerClass:[CollectionReusableHeaderView class] forSupplementaryViewOfKind:UICollectionElementKindSectionHeader withReuseIdentifier:@"header"];
     [self.collectionView registerClass:[UICollectionReusableView class] forSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer"];
     // Do any additional setup after loading the view.
 }
@@ -44,32 +43,32 @@ static NSString * const reuseIdentifier = @"Cell";
     YRSideViewController* vc = [[YRSideViewController alloc] init];
     vc.view.backgroundColor = [UIColor blueColor];
     
-
-//    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
-//    YRSideViewController *sideViewController=[delegate sideViewController];
-//    [sideViewController showLeftViewController:true];
+    
+    //    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    //    YRSideViewController *sideViewController=[delegate sideViewController];
+    //    [sideViewController showLeftViewController:true];
 }
 
 
 - (IBAction)showRight:(id)sender {
-//    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
-//    YRSideViewController *sideViewController=[delegate sideViewController];
-//    [sideViewController showRightViewController:true];
+    //    AppDelegate *delegate=(AppDelegate*)[[UIApplication sharedApplication]delegate];
+    //    YRSideViewController *sideViewController=[delegate sideViewController];
+    //    [sideViewController showRightViewController:true];
 }
 
 /*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+ #pragma mark - Navigation
+ 
+ // In a storyboard-based application, you will often want to do a little preparation before navigation
+ - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+ // Get the new view controller using [segue destinationViewController].
+ // Pass the selected object to the new view controller.
+ }
+ */
 
 #pragma mark - UICollectionViewDelegateFlowLayout
 -(CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout referenceSizeForHeaderInSection:(NSInteger)section{
-
+    
     return CGSizeMake(collectionView.frame.size.width, 100);
 }
 
@@ -98,13 +97,13 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDataSource>
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
-
+    
     return 1;
 }
 
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
-
+    
     return 10;
 }
 
@@ -120,7 +119,7 @@ static NSString * const reuseIdentifier = @"Cell";
 #pragma mark <UICollectionViewDelegate>
 -(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
     [collectionView deselectItemAtIndexPath:indexPath animated:YES];
-     NSString* classString = @"";
+    NSString* classString = @"";
     switch (indexPath.item) {
         case 0:
             classString = @"TempVC1";
@@ -129,7 +128,7 @@ static NSString * const reuseIdentifier = @"Cell";
         case 1:
             classString = @"TempVC2";
             break;
-          
+            
         case 2:
             classString = @"TempVC3";
             break;
@@ -149,7 +148,7 @@ static NSString * const reuseIdentifier = @"Cell";
     }
     UIViewController* vc = [[class alloc] init];
     [self.navigationController pushViewController:vc animated:YES];
-
+    
 }
 
 -(UICollectionReusableView*)collectionView:(UICollectionView *)collectionView viewForSupplementaryElementOfKind:(NSString *)kind atIndexPath:(NSIndexPath *)indexPath{
@@ -158,9 +157,9 @@ static NSString * const reuseIdentifier = @"Cell";
     
     if ([kind isEqualToString:UICollectionElementKindSectionHeader]) {
         CollectionReusableHeaderView* header = [collectionView dequeueReusableSupplementaryViewOfKind:kind withReuseIdentifier:@"header" forIndexPath:indexPath];
-    
+        
         header.frame = CGRectMake(0, 0, collectionView.frame.size.width, 100);
-        header.textLabel.text = @"这里放一个广告轮播";
+        
         view = header;
     }else{
         UICollectionReusableView* footer = [collectionView dequeueReusableSupplementaryViewOfKind:UICollectionElementKindSectionFooter withReuseIdentifier:@"footer" forIndexPath:indexPath];
@@ -168,37 +167,37 @@ static NSString * const reuseIdentifier = @"Cell";
         footer.backgroundColor = [UIColor grayColor];
         view = footer;
     }
-
+    
     return view;
 }
 
 /*
-// Uncomment this method to specify if the specified item should be highlighted during tracking
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
+ // Uncomment this method to specify if the specified item should be highlighted during tracking
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath {
 	return YES;
-}
-*/
+ }
+ */
 
 /*
-// Uncomment this method to specify if the specified item should be selected
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
-    return YES;
-}
-*/
+ // Uncomment this method to specify if the specified item should be selected
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+ return YES;
+ }
+ */
 
 /*
-// Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-- (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
+ // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
+ - (BOOL)collectionView:(UICollectionView *)collectionView shouldShowMenuForItemAtIndexPath:(NSIndexPath *)indexPath {
 	return NO;
-}
-
-- (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+ }
+ 
+ - (BOOL)collectionView:(UICollectionView *)collectionView canPerformAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	return NO;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
+ }
+ 
+ - (void)collectionView:(UICollectionView *)collectionView performAction:(SEL)action forItemAtIndexPath:(NSIndexPath *)indexPath withSender:(id)sender {
 	
-}
-*/
+ }
+ */
 
 @end
